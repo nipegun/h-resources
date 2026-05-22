@@ -237,9 +237,10 @@
   echo "      echo '[Exec]'                                                              | sudo tee    /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
   echo "      echo 'Capability=CAP_NET_ADMIN CAP_NET_RAW CAP_SYS_ADMIN CAP_SYS_RESOURCE' | sudo tee -a /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
   echo "      echo 'SystemCallFilter=add_key keyctl bpf'                                 | sudo tee -a /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
-  echo "      echo ''                                                                    | sudo tee -a /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
-  echo "      echo '[Network]'                                                           | sudo tee -a /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
-  echo "      echo 'VirtualEthernet=yes'                                                 | sudo tee -a /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
+  echo ""
+  echo "      Para hacer el forwarding persistente en el host:"
+  echo ""
+  echo "        echo 'net.ipv4.ip_forward=1' | sudo tee /etc/sysctl.d/99-docker-nspawn.conf"
   echo ''
 
 # Al salir del contenedor, destruirlo
