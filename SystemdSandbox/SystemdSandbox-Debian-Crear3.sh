@@ -232,6 +232,7 @@
   echo ""
   echo "    Para agregar capacidades de más privilegios al contenedor (por ejemplo para instalar docker dentro de él), ejecuta:"
   echo ''
+  echo '      sudo sysctl -w net.ipv4.ip_forward=1'
   echo '      sudo mkdir /etc/systemd/nspawn/'
   echo "      echo '[Exec]'                                                              | sudo tee    /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
   echo "      echo 'Capability=CAP_NET_ADMIN CAP_NET_RAW CAP_SYS_ADMIN CAP_SYS_RESOURCE' | sudo tee -a /etc/systemd/nspawn/"$vNombreDelContenedor".nspawn"
