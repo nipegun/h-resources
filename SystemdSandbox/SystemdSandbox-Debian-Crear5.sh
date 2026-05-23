@@ -205,6 +205,7 @@
   sudo systemd-nspawn -D "$vDirSandbox" --bind="$vMountHost:/mnt/host" --machine="$vNombreDelContenedor"
 
 # Notificar salida del contenedor
+  sudo mv -f "$vDirSandbox" "$vCarpetaBase"/"$vNombreDelContenedor"
   echo ""
   echo "  Saliendo del contenedor..."
   echo ""
