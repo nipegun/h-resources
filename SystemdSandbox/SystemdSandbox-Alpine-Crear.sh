@@ -102,7 +102,7 @@
   echo ""
   echo "      apk update && apk add curl"
   echo ""
-  sudo systemd-nspawn -D "$vDirSandbox" --bind="$vMountHost:/mnt/host" --machine="$vNombreContenedor"
+  sudo systemd-nspawn -U -D "$vDirSandbox" --bind="$vMountHost:/mnt/host" --machine="$vNombreContenedor"
 
 # Notificar salida del contenedor
   echo ""
@@ -110,7 +110,7 @@
   echo ""
   echo "    Para volver a entrar:"
   echo ""
-  echo "      sudo systemd-nspawn -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreContenedor""
+  echo "      sudo systemd-nspawn -U -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreContenedor""
   echo ""
   echo "    Para borrarlo:"
   echo ""
