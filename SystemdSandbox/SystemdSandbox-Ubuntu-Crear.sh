@@ -212,7 +212,7 @@
   echo "      rm -f /etc/resolv.conf && echo 'nameserver 9.9.9.9' > /etc/resolv.conf"
   echo "      curl -sLk https://raw.githubusercontent.com/nipegun/dh-scripts/refs/heads/main/SystemdSandbox/InSystemdSandbox-Ubuntu-Preparar-Base.sh | sed 's-SystemdSandbox-'"$vNombreDelContenedor"'-g' | bash"
   echo ""
-  sudo systemd-nspawn -D "$vDirSandbox" --bind="$vMountHost:/mnt/host" --machine="$vNombreDelContenedor"
+  sudo systemd-nspawn -U -D "$vDirSandbox" --bind="$vMountHost:/mnt/host" --machine="$vNombreDelContenedor"
 
 # Notificar salida del contenedor
   echo ""
@@ -220,11 +220,11 @@
   echo ""
   echo "    Para volver a entrar:"
   echo ""
-  echo "      sudo systemd-nspawn -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreDelContenedor""
+  echo "      sudo systemd-nspawn -U -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreDelContenedor""
   echo ""
   echo "    Para iniciarlo con systemd:"
   echo ""
-  echo "      sudo systemd-nspawn -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreDelContenedor" --boot"
+  echo "      sudo systemd-nspawn -U -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreDelContenedor" --boot"
   echo ""
   echo "      La contraseña del root es raizraiz"
   echo ""
