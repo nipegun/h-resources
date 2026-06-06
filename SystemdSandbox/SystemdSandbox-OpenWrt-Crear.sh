@@ -124,7 +124,7 @@
     sudo ip link set devbrwan up
     sudo ip link set devbrlan up
 
-  sudo systemd-nspawn -D "$vDirSandbox" \
+  sudo systemd-nspawn -U -D "$vDirSandbox" \
     --bind="$vMountHost:/mnt/host"      \
     --machine="$vNombreContenedor"      \
     --network-veth-extra=wan:devbrwan --network-veth-extra=lan:devbrlan
@@ -135,7 +135,7 @@
   echo ""
   echo "    Para volver a entrar:"
   echo ""
-  echo "      sudo systemd-nspawn -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreContenedor""
+  echo "      sudo systemd-nspawn -U -D "$vDirSandbox" --bind='"$vMountHost:/mnt/host"' --machine="$vNombreContenedor""
   echo ""
   echo "    Para borrarlo:"
   echo ""
