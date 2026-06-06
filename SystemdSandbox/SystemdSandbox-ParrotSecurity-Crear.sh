@@ -69,7 +69,7 @@
         ;;
 
         3)
-          read -p "    Introduce la ruta absoluta donde quieras crear en contenedor (sin / final): " v
+          read -p "    Introduce la ruta absoluta donde quieras crear en contenedor (sin / final): " vCarpetaBase
         ;;
 
     esac
