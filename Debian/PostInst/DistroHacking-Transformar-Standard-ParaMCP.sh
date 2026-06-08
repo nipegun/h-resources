@@ -365,13 +365,6 @@
     # autoremove
       sudo apt-get -y autoremove
 
-    # Para el MCP, todo comando lanzado por el agente debería ir envuelto con timeout:
-      # timeout 300 comando
-      # Por ejemplo: `timeout 300 nmap -sV 10.10.10.10`
-
-    # Para comandos peligrosos o que puedan quedarse colgados
-      # systemd-run --scope -p MemoryMax=2G -p CPUQuota=200% timeout 600 comando
-
   elif [ $cVerSO == "12" ]; then
 
     echo ""
