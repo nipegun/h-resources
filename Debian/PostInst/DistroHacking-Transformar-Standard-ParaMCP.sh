@@ -126,7 +126,6 @@
       sudo apt-get -y install --no-install-recommends 'g++-arm-linux-gnueabihf'
       sudo apt-get -y install --no-install-recommends 'afl++'
 
-
     # Lenguajes y entornos
       sudo apt-get -y install --no-install-recommends python3
       sudo apt-get -y install --no-install-recommends python3-pip
