@@ -151,6 +151,16 @@
       sudo apt-get -y install --no-install-recommends ca-certificates
       sudo apt-get -y install --no-install-recommends gnupg
       sudo apt-get -y install --no-install-recommends tmux
+      sudo apt-get -y install --no-install-recommends procps
+      sudo apt-get -y install --no-install-recommends psmisc
+      sudo apt-get -y install --no-install-recommends lsof
+      sudo apt-get -y install --no-install-recommends timeout
+      sudo apt-get -y install --no-install-recommends parallel
+      sudo apt-get -y install --no-install-recommends expect
+      sudo apt-get -y install --no-install-recommends moreutils
+      sudo apt-get -y install --no-install-recommends rlwrap
+      sudo apt-get -y install --no-install-recommends pv
+      sudo apt-get -y install --no-install-recommends sysstat
       sudo apt-get -y install --no-install-recommends screen
       sudo apt-get -y install --no-install-recommends jq
       sudo apt-get -y install --no-install-recommends yq
@@ -360,22 +370,6 @@
       sudo apt-get -y autoremove --purge screen
       sudo apt-get -y autoremove --purge less
       sudo apt-get -y autoremove --purge mtr-tiny
-
-    # Herramientas para que el MCP pueda ejecutar comandos de forma más controlada y parseable
-      sudo apt-get -y install --no-install-recommends procps
-      sudo apt-get -y install --no-install-recommends psmisc
-      sudo apt-get -y install --no-install-recommends lsof
-      sudo apt-get -y install --no-install-recommends strace
-      sudo apt-get -y install --no-install-recommends timeout
-      sudo apt-get -y install --no-install-recommends parallel
-      sudo apt-get -y install --no-install-recommends expect
-      sudo apt-get -y install --no-install-recommends moreutils
-      sudo apt-get -y install --no-install-recommends jq
-      sudo apt-get -y install --no-install-recommends yq
-      sudo apt-get -y install --no-install-recommends xmlstarlet
-      sudo apt-get -y install --no-install-recommends rlwrap
-      sudo apt-get -y install --no-install-recommends pv
-      sudo apt-get -y install --no-install-recommends sysstat
 
     # Para el MCP, todo comando lanzado por el agente debería ir envuelto con timeout:
       # sudo apt-get -y install --no-install-recommends coreutils  # Es el paquete que instala el comando timeout
