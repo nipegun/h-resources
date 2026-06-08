@@ -121,7 +121,7 @@
       sudo apt-get -y install --no-install-recommends gcc-arm-linux-gnueabihf
       sudo apt-get -y install --no-install-recommends honggfuzz
       sudo apt-get -y install --no-install-recommends 'g++'
-      sudo apt-get -y install --no-install-recommends 'g++-multilib'
+      #sudo apt-get -y install --no-install-recommends 'g++-multilib'
       sudo apt-get -y install --no-install-recommends 'g++-aarch64-linux-gnu'
       sudo apt-get -y install --no-install-recommends 'g++-arm-linux-gnueabihf'
       sudo apt-get -y install --no-install-recommends 'afl++'
