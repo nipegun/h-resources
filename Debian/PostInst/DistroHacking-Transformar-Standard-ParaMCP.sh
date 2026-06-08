@@ -9,13 +9,13 @@
 # Script de NiPeGun para transformar Debian standard sin entorno gráfico en una distro de hacking
 #
 # Ejecución remota (puede requerir permisos sudo):
-#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standard.sh | bash
+#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standard-ParaMCP.sh | bash
 #
 # Ejecución remota como root (para sistemas sin sudo):
-#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standard.sh | sed 's-sudo--g' | bash
+#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standard-ParaMCP.sh | sed 's-sudo--g' | bash
 #
 # Bajar y editar directamente el archivo en nano
-#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standard.sh | nano -
+#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standardv-ParaMCP.sh | nano -
 # ----------
 
 # Definir constantes de color
