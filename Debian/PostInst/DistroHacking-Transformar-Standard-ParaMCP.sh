@@ -359,8 +359,11 @@
       sudo apt-get -y autoremove --purge nano
       sudo apt-get -y autoremove --purge tmux
       sudo apt-get -y autoremove --purge screen
-      sudo apt-get -y autoremove --purge less
+      #sudo apt-get -y autoremove --purge less
       sudo apt-get -y autoremove --purge mtr-tiny
+
+    # autoremove
+      sudo apt-get -y autoremove
 
     # Para el MCP, todo comando lanzado por el agente debería ir envuelto con timeout:
       # timeout 300 comando
