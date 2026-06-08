@@ -80,7 +80,7 @@
 
     # Binarios, reversing, pwn y compilación
       sudo apt-get -y install --no-install-recommends build-essential
-      sudo apt-get -y install --no-install-recommends gcc 
+      sudo apt-get -y install --no-install-recommends gcc
       sudo apt-get -y install --no-install-recommends clang
       sudo apt-get -y install --no-install-recommends make
       sudo apt-get -y install --no-install-recommends cmake
@@ -119,12 +119,13 @@
       sudo apt-get -y install --no-install-recommends python3-pyelftools
       sudo apt-get -y install --no-install-recommends gcc-aarch64-linux-gnu
       sudo apt-get -y install --no-install-recommends gcc-arm-linux-gnueabihf
+      sudo apt-get -y install --no-install-recommends honggfuzz
       sudo apt-get -y install --no-install-recommends 'g++'
       sudo apt-get -y install --no-install-recommends 'g++-multilib'
       sudo apt-get -y install --no-install-recommends 'g++-aarch64-linux-gnu'
       sudo apt-get -y install --no-install-recommends 'g++-arm-linux-gnueabihf'
       sudo apt-get -y install --no-install-recommends 'afl++'
-      sudo apt-get -y install --no-install-recommends honggfuzz
+
 
     # Lenguajes y entornos
       sudo apt-get -y install --no-install-recommends python3
