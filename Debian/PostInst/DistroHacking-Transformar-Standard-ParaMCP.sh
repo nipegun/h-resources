@@ -151,6 +151,16 @@
       sudo apt-get -y install --no-install-recommends ca-certificates
       sudo apt-get -y install --no-install-recommends gnupg
       sudo apt-get -y install --no-install-recommends tmux
+      sudo apt-get -y install --no-install-recommends procps
+      sudo apt-get -y install --no-install-recommends psmisc
+      sudo apt-get -y install --no-install-recommends lsof
+      sudo apt-get -y install --no-install-recommends timeout
+      sudo apt-get -y install --no-install-recommends parallel
+      sudo apt-get -y install --no-install-recommends expect
+      sudo apt-get -y install --no-install-recommends moreutils
+      sudo apt-get -y install --no-install-recommends rlwrap
+      sudo apt-get -y install --no-install-recommends pv
+      sudo apt-get -y install --no-install-recommends sysstat
       sudo apt-get -y install --no-install-recommends screen
       sudo apt-get -y install --no-install-recommends jq
       sudo apt-get -y install --no-install-recommends yq
@@ -346,22 +356,6 @@
       sudo apt-get -y install --no-install-recommends python3-gmpy2
       sudo apt-get -y install --no-install-recommends python3-numpy
       sudo apt-get -y install --no-install-recommends python3-scipy
-
-    # Herramientas para que el MCP pueda ejecutar comandos de forma más controlada y parseable
-      sudo apt-get -y install --no-install-recommends procps
-      sudo apt-get -y install --no-install-recommends psmisc
-      sudo apt-get -y install --no-install-recommends lsof
-      sudo apt-get -y install --no-install-recommends strace
-      sudo apt-get -y install --no-install-recommends timeout
-      sudo apt-get -y install --no-install-recommends parallel
-      sudo apt-get -y install --no-install-recommends expect
-      sudo apt-get -y install --no-install-recommends moreutils
-      sudo apt-get -y install --no-install-recommends jq
-      sudo apt-get -y install --no-install-recommends yq
-      sudo apt-get -y install --no-install-recommends xmlstarlet
-      sudo apt-get -y install --no-install-recommends rlwrap
-      sudo apt-get -y install --no-install-recommends pv
-      sudo apt-get -y install --no-install-recommends sysstat
 
     # Herramientas a desinstalar para MCP (porque son interactivas)
       sudo apt-get -y autoremove --purge htop
