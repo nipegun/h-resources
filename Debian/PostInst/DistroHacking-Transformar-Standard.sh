@@ -61,6 +61,19 @@
     # Actualizar la lista de paquetes disponibles en los repositorios
       sudo apt-get -y update
 
+    # Herramientas para tener trazabilidad de lo que se haya ejecutado
+      sudo apt-get -y install --no-install-recommends auditd
+      sudo apt-get -y install --no-install-recommends acct
+      sudo apt-get -y install --no-install-recommends rsyslog
+      sudo apt-get -y install --no-install-recommends logrotate
+
+    # Utilidades de aislamiento, contención y ejecución controlada
+      sudo apt-get -y install --no-install-recommends bubblewrap
+      sudo apt-get -y install --no-install-recommends firejail
+      sudo apt-get -y install --no-install-recommends systemd-container
+      sudo apt-get -y install --no-install-recommends schroot
+      sudo apt-get -y install --no-install-recommends chrootuid
+
     # DFIR
       sudo apt-get -y install --no-install-recommends forensics-all   # Sólo herramientas para consola
       sudo apt-get -y install --no-install-recommends forensics-extra # Herramientas extra para consola
@@ -68,7 +81,6 @@
     # Binarios, reversing, pwn y compilación
       sudo apt-get -y install --no-install-recommends build-essential
       sudo apt-get -y install --no-install-recommends gcc 
-      sudo apt-get -y install --no-install-recommends g++
       sudo apt-get -y install --no-install-recommends clang
       sudo apt-get -y install --no-install-recommends make
       sudo apt-get -y install --no-install-recommends cmake
@@ -95,20 +107,24 @@
       sudo apt-get -y install --no-install-recommends libc6-i386
       sudo apt-get -y install --no-install-recommends libc6-dev-i386
       sudo apt-get -y install --no-install-recommends gcc-multilib
-      sudo apt-get -y install --no-install-recommends 'g++-multilib'
       sudo apt-get -y install --no-install-recommends libc6-dbg
       sudo apt-get -y install --no-install-recommends gdbserver
       sudo apt-get -y install --no-install-recommends binutils-multiarch
       sudo apt-get -y install --no-install-recommends python3-pwntools
       sudo apt-get -y install --no-install-recommends python3-ropgadget
+      sudo apt-get -y install --no-install-recommends pwntools
+      sudo apt-get -y install --no-install-recommends ropgadget
       sudo apt-get -y install --no-install-recommends python3-capstone
       sudo apt-get -y install --no-install-recommends python3-unicorn
       sudo apt-get -y install --no-install-recommends python3-pyelftools
       sudo apt-get -y install --no-install-recommends gcc-aarch64-linux-gnu
-      sudo apt-get -y install --no-install-recommends 'g++-aarch64-linux-gnu'
       sudo apt-get -y install --no-install-recommends gcc-arm-linux-gnueabihf
+      sudo apt-get -y install --no-install-recommends 'g++'
+      sudo apt-get -y install --no-install-recommends 'g++-multilib'
+      sudo apt-get -y install --no-install-recommends 'g++-aarch64-linux-gnu'
       sudo apt-get -y install --no-install-recommends 'g++-arm-linux-gnueabihf'
       sudo apt-get -y install --no-install-recommends 'afl++'
+      sudo apt-get -y install --no-install-recommends honggfuzz
 
     # Lenguajes y entornos
       sudo apt-get -y install --no-install-recommends python3
@@ -162,9 +178,12 @@
       sudo apt-get -y install --no-install-recommends xz-utils
       sudo apt-get -y install --no-install-recommends cpio
       sudo apt-get -y install --no-install-recommends sqlite3
+      sudo apt-get -y install --no-install-recommends suricata
 
     # Redes servicios y protocolos
       sudo apt-get -y install --no-install-recommends nmap
+      sudo apt-get -y install --no-install-recommends netdiscover
+      sudo apt-get -y install --no-install-recommends bettercap
       sudo apt-get -y install --no-install-recommends ncat
       sudo apt-get -y install --no-install-recommends ndiff
       sudo apt-get -y install --no-install-recommends masscan
@@ -181,15 +200,21 @@
       sudo apt-get -y install --no-install-recommends tshark
       sudo apt-get -y install --no-install-recommends ngrep
       sudo apt-get -y install --no-install-recommends tcpick
+      sudo apt-get -y install --no-install-recommends tcpflow
       sudo apt-get -y install --no-install-recommends net-tools
       sudo apt-get -y install --no-install-recommends socat
       sudo apt-get -y install --no-install-recommends netcat-openbsd
       sudo apt-get -y install --no-install-recommends openssl
+      sudo apt-get -y install --no-install-recommends sslsplit
       sudo apt-get -y install --no-install-recommends testssl.sh
       sudo apt-get -y install --no-install-recommends sslscan
+      sudo apt-get -y install --no-install-recommends ssh-audit
+      sudo apt-get -y install --no-install-recommends impacket
       sudo apt-get -y install --no-install-recommends smbclient
       sudo apt-get -y install --no-install-recommends nbtscan
       sudo apt-get -y install --no-install-recommends smbmap
+      sudo apt-get -y install --no-install-recommends enum4linux
+      sudo apt-get -y install --no-install-recommends ldapsearch
       sudo apt-get -y install --no-install-recommends snmp
       sudo apt-get -y install --no-install-recommends braa
       sudo apt-get -y install --no-install-recommends ike-scan
@@ -222,6 +247,7 @@
       sudo apt-get -y install --no-install-recommends hydra
       sudo apt-get -y install --no-install-recommends medusa
       sudo apt-get -y install --no-install-recommends ncrack
+      sudo apt-get -y install --no-install-recommends patator
       sudo apt-get -y install --no-install-recommends brutespray
       sudo apt-get -y install --no-install-recommends john
       sudo apt-get -y install --no-install-recommends hashcat
@@ -246,14 +272,17 @@
       sudo apt-get -y install --no-install-recommends binwalk
       sudo apt-get -y install --no-install-recommends foremost
       sudo apt-get -y install --no-install-recommends scalpel
+      sudo apt-get -y install --no-install-recommends kpartx
       sudo apt-get -y install --no-install-recommends sleuthkit
       sudo apt-get -y install --no-install-recommends testdisk
+      sudo apt-get -y install --no-install-recommends cryptsetup
       sudo apt-get -y install --no-install-recommends plaso
       sudo apt-get -y install --no-install-recommends yara
       sudo apt-get -y install --no-install-recommends ssdeep
       sudo apt-get -y install --no-install-recommends hashdeep
       sudo apt-get -y install --no-install-recommends hashrat
       sudo apt-get -y install --no-install-recommends libimage-exiftool-perl
+      sudo apt-get -y install --no-install-recommends exiftool
       sudo apt-get -y install --no-install-recommends exiv2
       sudo apt-get -y install --no-install-recommends pngcheck
       sudo apt-get -y install --no-install-recommends jpeginfo
@@ -270,6 +299,8 @@
       sudo apt-get -y install --no-install-recommends ext4magic
       sudo apt-get -y install --no-install-recommends extundelete
       sudo apt-get -y install --no-install-recommends dislocker
+      sudo apt-get -y install --no-install-recommends mount
+      sudo apt-get -y install --no-install-recommends losetup
       sudo apt-get -y install --no-install-recommends xmount
       sudo apt-get -y install --no-install-recommends pff-tools
       sudo apt-get -y install --no-install-recommends regripper
@@ -295,6 +326,13 @@
       sudo apt-get -y install --no-install-recommends btscanner
       sudo apt-get -y install --no-install-recommends mfcuk
       sudo apt-get -y install --no-install-recommends mfoc
+      sudo apt-get -y install --no-install-recommends airmon-ng
+      sudo apt-get -y install --no-install-recommends aireplay-ng
+
+    # Android y aplicaciones móviles
+      sudo apt-get -y install --no-install-recommends apktool
+      sudo apt-get -y install --no-install-recommends adb
+      sudo apt-get -y install --no-install-recommends fastboot
 
     # Criptografía, matemáticas y scripting científico
       sudo apt-get -y install --no-install-recommends sagemath
@@ -308,111 +346,6 @@
       sudo apt-get -y install --no-install-recommends python3-gmpy2
       sudo apt-get -y install --no-install-recommends python3-numpy
       sudo apt-get -y install --no-install-recommends python3-scipy
-
-airmon-ng
-aireplay-ng
-
-    # Herramientas que funcionarán mejor directamente como root
-      sudo apt-get -y install --no-install-recommends nmap
-      sudo apt-get -y install --no-install-recommends masscan
-      sudo apt-get -y install --no-install-recommends tcpdump
-      sudo apt-get -y install --no-install-recommends tshark
-      sudo apt-get -y install --no-install-recommends hping3
-      sudo apt-get -y install --no-install-recommends arp-scan
-      sudo apt-get -y install --no-install-recommends netdiscover
-      sudo apt-get -y install --no-install-recommends bettercap
-      sudo apt-get -y install --no-install-recommends suricata
-      sudo apt-get -y install --no-install-recommends hcxdumptool
-      sudo apt-get -y install --no-install-recommends aircrack-ng
-      sudo apt-get -y install --no-install-recommends reaver
-      sudo apt-get -y install --no-install-recommends bully
-      sudo apt-get -y install --no-install-recommends mdk3
-      sudo apt-get -y install --no-install-recommends mdk4
-      sudo apt-get -y install --no-install-recommends mount
-      sudo apt-get -y install --no-install-recommends losetup
-      sudo apt-get -y install --no-install-recommends kpartx
-      sudo apt-get -y install --no-install-recommends cryptsetup
-      sudo apt-get -y install --no-install-recommends dislocker
-      sudo apt-get -y install --no-install-recommends xmount
-      sudo apt-get -y install --no-install-recommends binwalk
-      sudo apt-get -y install --no-install-recommends foremost
-      sudo apt-get -y install --no-install-recommends scalpel
-      sudo apt-get -y install --no-install-recommends testdisk
-      sudo apt-get -y install --no-install-recommends sleuthkit
-
-
-    # Herramientas prioritarias para uso con agente
-      sudo apt-get -y install --no-install-recommends nmap
-      sudo apt-get -y install --no-install-recommends masscan
-      sudo apt-get -y install --no-install-recommends ffuf
-      sudo apt-get -y install --no-install-recommends gobuster
-      sudo apt-get -y install --no-install-recommends dirsearch
-      sudo apt-get -y install --no-install-recommends wfuzz
-      sudo apt-get -y install --no-install-recommends sqlmap
-      sudo apt-get -y install --no-install-recommends whatweb
-      sudo apt-get -y install --no-install-recommends wafw00f
-      sudo apt-get -y install --no-install-recommends dnsrecon
-      sudo apt-get -y install --no-install-recommends dnsenum
-      sudo apt-get -y install --no-install-recommends dnstwist
-      sudo apt-get -y install --no-install-recommends assetfinder
-      sudo apt-get -y install --no-install-recommends sherlock
-      sudo apt-get -y install --no-install-recommends waymore
-      sudo apt-get -y install --no-install-recommends arjun
-      sudo apt-get -y install --no-install-recommends paramspider
-      sudo apt-get -y install --no-install-recommends hydra
-      sudo apt-get -y install --no-install-recommends medusa
-      sudo apt-get -y install --no-install-recommends ncrack
-      sudo apt-get -y install --no-install-recommends john
-      sudo apt-get -y install --no-install-recommends hashcat
-      sudo apt-get -y install --no-install-recommends hashid
-      sudo apt-get -y install --no-install-recommends cewl
-      sudo apt-get -y install --no-install-recommends crunch
-      sudo apt-get -y install --no-install-recommends cupp
-      sudo apt-get -y install --no-install-recommends binwalk
-      sudo apt-get -y install --no-install-recommends foremost
-      sudo apt-get -y install --no-install-recommends scalpel
-      sudo apt-get -y install --no-install-recommends sleuthkit
-      sudo apt-get -y install --no-install-recommends testdisk
-      sudo apt-get -y install --no-install-recommends plaso
-      sudo apt-get -y install --no-install-recommends yara
-      sudo apt-get -y install --no-install-recommends ssdeep
-      sudo apt-get -y install --no-install-recommends hashdeep
-      sudo apt-get -y install --no-install-recommends exiftool
-      sudo apt-get -y install --no-install-recommends steghide
-      sudo apt-get -y install --no-install-recommends stegseek
-      sudo apt-get -y install --no-install-recommends outguess
-      sudo apt-get -y install --no-install-recommends aircrack-ng
-      sudo apt-get -y install --no-install-recommends hcxdumptool
-      sudo apt-get -y install --no-install-recommends hcxtools
-      sudo apt-get -y install --no-install-recommends reaver
-      sudo apt-get -y install --no-install-recommends pixiewps
-      sudo apt-get -y install --no-install-recommends impacket
-      sudo apt-get -y install --no-install-recommends patator
-      sudo apt-get -y install --no-install-recommends ldapsearch
-      sudo apt-get -y install --no-install-recommends smbclient
-      sudo apt-get -y install --no-install-recommends smbmap
-      sudo apt-get -y install --no-install-recommends enum4linux
-      sudo apt-get -y install --no-install-recommends apktool
-      sudo apt-get -y install --no-install-recommends adb
-      sudo apt-get -y install --no-install-recommends fastboot
-      sudo apt-get -y install --no-install-recommends gdb
-      sudo apt-get -y install --no-install-recommends gdbserver
-      sudo apt-get -y install --no-install-recommends strace
-      sudo apt-get -y install --no-install-recommends ltrace
-      sudo apt-get -y install --no-install-recommends valgrind
-      sudo apt-get -y install --no-install-recommends checksec
-      sudo apt-get -y install --no-install-recommends ropgadget
-      sudo apt-get -y install --no-install-recommends pwntools
-      sudo apt-get -y install --no-install-recommends afl++
-      sudo apt-get -y install --no-install-recommends honggfuzz
-      sudo apt-get -y install --no-install-recommends suricata
-      sudo apt-get -y install --no-install-recommends tshark
-      sudo apt-get -y install --no-install-recommends tcpdump
-      sudo apt-get -y install --no-install-recommends tcpflow
-      sudo apt-get -y install --no-install-recommends sslsplit
-      sudo apt-get -y install --no-install-recommends sslscan
-      sudo apt-get -y install --no-install-recommends testssl.sh
-      sudo apt-get -y install --no-install-recommends ssh-audit
 
     # Herramientas a desinstalar para MCP (porque son interactivas)
       sudo apt-get -y autoremove --purge htop
@@ -448,19 +381,6 @@ aireplay-ng
       # sudo apt-get -y install --no-install-recommends coreutils  # Es el paquete que instala el comando timeout
       # timeout 300 comando
       # Por ejemplo: `timeout 300 nmap -sV 10.10.10.10`
-
-    # Utilidades de aislamiento, contención y ejecución controlada
-      sudo apt-get -y install --no-install-recommends bubblewrap
-      sudo apt-get -y install --no-install-recommends firejail
-      sudo apt-get -y install --no-install-recommends systemd-container
-      sudo apt-get -y install --no-install-recommends schroot
-      sudo apt-get -y install --no-install-recommends chrootuid
-
-    # Herramientas para trazabilidad de lo que ejecute el mcp
-      sudo apt-get -y install --no-install-recommends auditd
-      sudo apt-get -y install --no-install-recommends acct
-      sudo apt-get -y install --no-install-recommends rsyslog
-      sudo apt-get -y install --no-install-recommends logrotate
 
     # Para comandos peligrosos o que puedan quedarse colgados
       # systemd-run --scope -p MemoryMax=2G -p CPUQuota=200% timeout 600 comando
