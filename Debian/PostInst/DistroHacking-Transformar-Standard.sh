@@ -80,7 +80,7 @@
 
     # Binarios, reversing, pwn y compilación
       sudo apt-get -y install --no-install-recommends build-essential
-      sudo apt-get -y install --no-install-recommends gcc 
+      sudo apt-get -y install --no-install-recommends gcc
       sudo apt-get -y install --no-install-recommends clang
       sudo apt-get -y install --no-install-recommends make
       sudo apt-get -y install --no-install-recommends cmake
@@ -119,12 +119,12 @@
       sudo apt-get -y install --no-install-recommends python3-pyelftools
       sudo apt-get -y install --no-install-recommends gcc-aarch64-linux-gnu
       sudo apt-get -y install --no-install-recommends gcc-arm-linux-gnueabihf
+      sudo apt-get -y install --no-install-recommends honggfuzz
       sudo apt-get -y install --no-install-recommends 'g++'
       sudo apt-get -y install --no-install-recommends 'g++-multilib'
       sudo apt-get -y install --no-install-recommends 'g++-aarch64-linux-gnu'
       sudo apt-get -y install --no-install-recommends 'g++-arm-linux-gnueabihf'
       sudo apt-get -y install --no-install-recommends 'afl++'
-      sudo apt-get -y install --no-install-recommends honggfuzz
 
     # Lenguajes y entornos
       sudo apt-get -y install --no-install-recommends python3
@@ -150,18 +150,16 @@
       sudo apt-get -y install --no-install-recommends aria2
       sudo apt-get -y install --no-install-recommends ca-certificates
       sudo apt-get -y install --no-install-recommends gnupg
-      sudo apt-get -y install --no-install-recommends tmux
       sudo apt-get -y install --no-install-recommends procps
       sudo apt-get -y install --no-install-recommends psmisc
       sudo apt-get -y install --no-install-recommends lsof
-      sudo apt-get -y install --no-install-recommends timeout
+      sudo apt-get -y install --no-install-recommends coreutils # Proporciona timeout
       sudo apt-get -y install --no-install-recommends parallel
       sudo apt-get -y install --no-install-recommends expect
       sudo apt-get -y install --no-install-recommends moreutils
       sudo apt-get -y install --no-install-recommends rlwrap
       sudo apt-get -y install --no-install-recommends pv
       sudo apt-get -y install --no-install-recommends sysstat
-      sudo apt-get -y install --no-install-recommends screen
       sudo apt-get -y install --no-install-recommends jq
       sudo apt-get -y install --no-install-recommends yq
       sudo apt-get -y install --no-install-recommends xmlstarlet
@@ -170,9 +168,6 @@
       sudo apt-get -y install --no-install-recommends bat
       sudo apt-get -y install --no-install-recommends xxd
       sudo apt-get -y install --no-install-recommends file
-      sudo apt-get -y install --no-install-recommends less
-      sudo apt-get -y install --no-install-recommends vim
-      sudo apt-get -y install --no-install-recommends nano
       sudo apt-get -y install --no-install-recommends unzip
       sudo apt-get -y install --no-install-recommends zip
       sudo apt-get -y install --no-install-recommends 7zip
@@ -188,7 +183,7 @@
       sudo apt-get -y install --no-install-recommends xz-utils
       sudo apt-get -y install --no-install-recommends cpio
       sudo apt-get -y install --no-install-recommends sqlite3
-      sudo apt-get -y install --no-install-recommends suricata
+      sudo apt-get -y install --no-install-recommends nano
 
     # Redes servicios y protocolos
       sudo apt-get -y install --no-install-recommends nmap
@@ -204,10 +199,10 @@
       sudo apt-get -y install --no-install-recommends iproute2
       sudo apt-get -y install --no-install-recommends iputils-ping
       sudo apt-get -y install --no-install-recommends traceroute
-      sudo apt-get -y install --no-install-recommends mtr-tiny
       sudo apt-get -y install --no-install-recommends whois
       sudo apt-get -y install --no-install-recommends tcpdump
       sudo apt-get -y install --no-install-recommends tshark
+      sudo apt-get -y install --no-install-recommends suricata
       sudo apt-get -y install --no-install-recommends ngrep
       sudo apt-get -y install --no-install-recommends tcpick
       sudo apt-get -y install --no-install-recommends tcpflow
@@ -224,7 +219,7 @@
       sudo apt-get -y install --no-install-recommends nbtscan
       sudo apt-get -y install --no-install-recommends smbmap
       sudo apt-get -y install --no-install-recommends enum4linux
-      sudo apt-get -y install --no-install-recommends ldapsearch
+      sudo apt-get -y install --no-install-recommends ldap-utils # Proporciona ldapsearch
       sudo apt-get -y install --no-install-recommends snmp
       sudo apt-get -y install --no-install-recommends braa
       sudo apt-get -y install --no-install-recommends ike-scan
@@ -310,7 +305,6 @@
       sudo apt-get -y install --no-install-recommends extundelete
       sudo apt-get -y install --no-install-recommends dislocker
       sudo apt-get -y install --no-install-recommends mount
-      sudo apt-get -y install --no-install-recommends losetup
       sudo apt-get -y install --no-install-recommends xmount
       sudo apt-get -y install --no-install-recommends pff-tools
       sudo apt-get -y install --no-install-recommends regripper
@@ -336,8 +330,6 @@
       sudo apt-get -y install --no-install-recommends btscanner
       sudo apt-get -y install --no-install-recommends mfcuk
       sudo apt-get -y install --no-install-recommends mfoc
-      sudo apt-get -y install --no-install-recommends airmon-ng
-      sudo apt-get -y install --no-install-recommends aireplay-ng
 
     # Android y aplicaciones móviles
       sudo apt-get -y install --no-install-recommends apktool
@@ -356,28 +348,6 @@
       sudo apt-get -y install --no-install-recommends python3-gmpy2
       sudo apt-get -y install --no-install-recommends python3-numpy
       sudo apt-get -y install --no-install-recommends python3-scipy
-
-    # Herramientas a desinstalar para MCP (porque son interactivas)
-      sudo apt-get -y autoremove --purge htop
-      sudo apt-get -y autoremove --purge iotop
-      sudo apt-get -y autoremove --purge iftop
-      sudo apt-get -y autoremove --purge nethogs
-      sudo apt-get -y autoremove --purge bmon
-      sudo apt-get -y autoremove --purge termshark
-      sudo apt-get -y autoremove --purge vim
-      sudo apt-get -y autoremove --purge nano
-      sudo apt-get -y autoremove --purge tmux
-      sudo apt-get -y autoremove --purge screen
-      sudo apt-get -y autoremove --purge less
-      sudo apt-get -y autoremove --purge mtr-tiny
-
-    # Para el MCP, todo comando lanzado por el agente debería ir envuelto con timeout:
-      # sudo apt-get -y install --no-install-recommends coreutils  # Es el paquete que instala el comando timeout
-      # timeout 300 comando
-      # Por ejemplo: `timeout 300 nmap -sV 10.10.10.10`
-
-    # Para comandos peligrosos o que puedan quedarse colgados
-      # systemd-run --scope -p MemoryMax=2G -p CPUQuota=200% timeout 600 comando
 
   elif [ $cVerSO == "12" ]; then
 
