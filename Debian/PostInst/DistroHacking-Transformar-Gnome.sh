@@ -6,16 +6,16 @@
 # No tienes que aceptar ningún tipo de términos de uso o licencia para utilizarlo o modificarlo porque va sin CopyLeft.
 
 # ----------
-# Script de NiPeGun para transformar Debian standard sin entorno gráfico en una distro de hacking
+# Script de NiPeGun para transformar Debian con escritorio Gnome en una distro de hacking
 #
 # Ejecución remota (puede requerir permisos sudo):
-#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standard-Gnome.sh | bash
+#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Gnome.sh | bash
 #
 # Ejecución remota como root (para sistemas sin sudo):
-#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standard-Gnome.sh | sed 's-sudo--g' | bash
+#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Gnome.sh | sed 's-sudo--g' | bash
 #
 # Bajar y editar directamente el archivo en nano
-#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Standardv-Gnome.sh | nano -
+#   curl -sL https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/Debian/PostInst/DistroHacking-Transformar-Gnome.sh | nano -
 # ----------
 
 # Definir constantes de color
@@ -52,7 +52,7 @@
   if [ $cVerSO == "13" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 13 (Trixie) standard sin entorno gráfico en una distro de hacking...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 13 (Trixie) con escritorio Gnome en una distro de hacking...${cFinColor}"
     echo ""
 
     # Para que el script sea más compatible con ejecución automatizada, pondría esto al principio para evitar prompts interactivos durante la instalación
@@ -367,7 +367,7 @@
   elif [ $cVerSO == "12" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 12 (Bookworm) standard sin entorno gráfico en una distro de hacking...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 12 (Bookworm) con escritorio Gnome en una distro de hacking...${cFinColor}"
     echo ""
 
     echo ""
@@ -377,7 +377,7 @@
   elif [ $cVerSO == "11" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 11 (Bullseye) standard sin entorno gráfico en una distro de hacking...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 11 (Bullseye) con escritorio Gnome en una distro de hacking...${cFinColor}"
     echo ""
 
     echo ""
@@ -387,7 +387,7 @@
   elif [ $cVerSO == "10" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 10 (Buster) standard sin entorno gráfico en una distro de hacking...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 10 (Buster) con escritorio Gnome en una distro de hacking...${cFinColor}"
     echo ""
 
     echo ""
@@ -397,7 +397,7 @@
   elif [ $cVerSO == "9" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 9 (Stretch) standard sin entorno gráfico en una distro de hacking...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 9 (Stretch) con escritorio Gnome en una distro de hacking...${cFinColor}"
     echo ""
 
     echo ""
@@ -407,7 +407,7 @@
   elif [ $cVerSO == "8" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 8 (Jessie) standard sin entorno gráfico en una distro de hacking...${cFinColor}"
+    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 8 (Jessie) con escritorio Gnome en una distro de hacking...${cFinColor}"
     echo ""
 
     echo ""
@@ -417,7 +417,7 @@
   elif [ $cVerSO == "7" ]; then
 
     echo ""
-    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 7 (Wheezy) standard sin entorno gráfico en una distro de hacking....${cFinColor}"
+    echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 7 (Wheezy) con escritorio Gnome en una distro de hacking....${cFinColor}"
     echo ""
 
     echo ""
