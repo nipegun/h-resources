@@ -55,6 +55,9 @@
     echo -e "${cColorAzulClaro}  Script de NiPeGun para transformar Debian 13 (Trixie) standard sin entorno gráfico en una distro de hacking...${cFinColor}"
     echo ""
 
+    # Para que el script sea más compatible con ejecución automatizada, pondría esto al principio para evitar prompts interactivos durante la instalación
+      export DEBIAN_FRONTEND=noninteractive
+
     # Actualizar la lista de paquetes disponibles en los repositorios
       sudo apt-get -y update
 
@@ -305,6 +308,162 @@
       sudo apt-get -y install --no-install-recommends python3-gmpy2
       sudo apt-get -y install --no-install-recommends python3-numpy
       sudo apt-get -y install --no-install-recommends python3-scipy
+
+airmon-ng
+aireplay-ng
+
+    # Herramientas que funcionarán mejor directamente como root
+      sudo apt-get -y install --no-install-recommends nmap
+      sudo apt-get -y install --no-install-recommends masscan
+      sudo apt-get -y install --no-install-recommends tcpdump
+      sudo apt-get -y install --no-install-recommends tshark
+      sudo apt-get -y install --no-install-recommends hping3
+      sudo apt-get -y install --no-install-recommends arp-scan
+      sudo apt-get -y install --no-install-recommends netdiscover
+      sudo apt-get -y install --no-install-recommends bettercap
+      sudo apt-get -y install --no-install-recommends suricata
+      sudo apt-get -y install --no-install-recommends hcxdumptool
+      sudo apt-get -y install --no-install-recommends aircrack-ng
+      sudo apt-get -y install --no-install-recommends reaver
+      sudo apt-get -y install --no-install-recommends bully
+      sudo apt-get -y install --no-install-recommends mdk3
+      sudo apt-get -y install --no-install-recommends mdk4
+      sudo apt-get -y install --no-install-recommends mount
+      sudo apt-get -y install --no-install-recommends losetup
+      sudo apt-get -y install --no-install-recommends kpartx
+      sudo apt-get -y install --no-install-recommends cryptsetup
+      sudo apt-get -y install --no-install-recommends dislocker
+      sudo apt-get -y install --no-install-recommends xmount
+      sudo apt-get -y install --no-install-recommends binwalk
+      sudo apt-get -y install --no-install-recommends foremost
+      sudo apt-get -y install --no-install-recommends scalpel
+      sudo apt-get -y install --no-install-recommends testdisk
+      sudo apt-get -y install --no-install-recommends sleuthkit
+
+
+    # Herramientas prioritarias para uso con agente
+      sudo apt-get -y install --no-install-recommends nmap
+      sudo apt-get -y install --no-install-recommends masscan
+      sudo apt-get -y install --no-install-recommends ffuf
+      sudo apt-get -y install --no-install-recommends gobuster
+      sudo apt-get -y install --no-install-recommends dirsearch
+      sudo apt-get -y install --no-install-recommends wfuzz
+      sudo apt-get -y install --no-install-recommends sqlmap
+      sudo apt-get -y install --no-install-recommends whatweb
+      sudo apt-get -y install --no-install-recommends wafw00f
+      sudo apt-get -y install --no-install-recommends dnsrecon
+      sudo apt-get -y install --no-install-recommends dnsenum
+      sudo apt-get -y install --no-install-recommends dnstwist
+      sudo apt-get -y install --no-install-recommends assetfinder
+      sudo apt-get -y install --no-install-recommends sherlock
+      sudo apt-get -y install --no-install-recommends waymore
+      sudo apt-get -y install --no-install-recommends arjun
+      sudo apt-get -y install --no-install-recommends paramspider
+      sudo apt-get -y install --no-install-recommends hydra
+      sudo apt-get -y install --no-install-recommends medusa
+      sudo apt-get -y install --no-install-recommends ncrack
+      sudo apt-get -y install --no-install-recommends john
+      sudo apt-get -y install --no-install-recommends hashcat
+      sudo apt-get -y install --no-install-recommends hashid
+      sudo apt-get -y install --no-install-recommends cewl
+      sudo apt-get -y install --no-install-recommends crunch
+      sudo apt-get -y install --no-install-recommends cupp
+      sudo apt-get -y install --no-install-recommends binwalk
+      sudo apt-get -y install --no-install-recommends foremost
+      sudo apt-get -y install --no-install-recommends scalpel
+      sudo apt-get -y install --no-install-recommends sleuthkit
+      sudo apt-get -y install --no-install-recommends testdisk
+      sudo apt-get -y install --no-install-recommends plaso
+      sudo apt-get -y install --no-install-recommends yara
+      sudo apt-get -y install --no-install-recommends ssdeep
+      sudo apt-get -y install --no-install-recommends hashdeep
+      sudo apt-get -y install --no-install-recommends exiftool
+      sudo apt-get -y install --no-install-recommends steghide
+      sudo apt-get -y install --no-install-recommends stegseek
+      sudo apt-get -y install --no-install-recommends outguess
+      sudo apt-get -y install --no-install-recommends aircrack-ng
+      sudo apt-get -y install --no-install-recommends hcxdumptool
+      sudo apt-get -y install --no-install-recommends hcxtools
+      sudo apt-get -y install --no-install-recommends reaver
+      sudo apt-get -y install --no-install-recommends pixiewps
+      sudo apt-get -y install --no-install-recommends impacket
+      sudo apt-get -y install --no-install-recommends patator
+      sudo apt-get -y install --no-install-recommends ldapsearch
+      sudo apt-get -y install --no-install-recommends smbclient
+      sudo apt-get -y install --no-install-recommends smbmap
+      sudo apt-get -y install --no-install-recommends enum4linux
+      sudo apt-get -y install --no-install-recommends apktool
+      sudo apt-get -y install --no-install-recommends adb
+      sudo apt-get -y install --no-install-recommends fastboot
+      sudo apt-get -y install --no-install-recommends gdb
+      sudo apt-get -y install --no-install-recommends gdbserver
+      sudo apt-get -y install --no-install-recommends strace
+      sudo apt-get -y install --no-install-recommends ltrace
+      sudo apt-get -y install --no-install-recommends valgrind
+      sudo apt-get -y install --no-install-recommends checksec
+      sudo apt-get -y install --no-install-recommends ropgadget
+      sudo apt-get -y install --no-install-recommends pwntools
+      sudo apt-get -y install --no-install-recommends afl++
+      sudo apt-get -y install --no-install-recommends honggfuzz
+      sudo apt-get -y install --no-install-recommends suricata
+      sudo apt-get -y install --no-install-recommends tshark
+      sudo apt-get -y install --no-install-recommends tcpdump
+      sudo apt-get -y install --no-install-recommends tcpflow
+      sudo apt-get -y install --no-install-recommends sslsplit
+      sudo apt-get -y install --no-install-recommends sslscan
+      sudo apt-get -y install --no-install-recommends testssl.sh
+      sudo apt-get -y install --no-install-recommends ssh-audit
+
+    # Herramientas a desinstalar para MCP (porque son interactivas)
+      sudo apt-get -y autoremove --purge htop
+      sudo apt-get -y autoremove --purge iotop
+      sudo apt-get -y autoremove --purge iftop
+      sudo apt-get -y autoremove --purge nethogs
+      sudo apt-get -y autoremove --purge bmon
+      sudo apt-get -y autoremove --purge termshark
+      sudo apt-get -y autoremove --purge vim
+      sudo apt-get -y autoremove --purge nano
+      sudo apt-get -y autoremove --purge tmux
+      sudo apt-get -y autoremove --purge screen
+      sudo apt-get -y autoremove --purge less
+      sudo apt-get -y autoremove --purge mtr-tiny
+
+    # Herramientas para que el MCP pueda ejecutar comandos de forma más controlada y parseable
+      sudo apt-get -y install --no-install-recommends procps
+      sudo apt-get -y install --no-install-recommends psmisc
+      sudo apt-get -y install --no-install-recommends lsof
+      sudo apt-get -y install --no-install-recommends strace
+      sudo apt-get -y install --no-install-recommends timeout
+      sudo apt-get -y install --no-install-recommends parallel
+      sudo apt-get -y install --no-install-recommends expect
+      sudo apt-get -y install --no-install-recommends moreutils
+      sudo apt-get -y install --no-install-recommends jq
+      sudo apt-get -y install --no-install-recommends yq
+      sudo apt-get -y install --no-install-recommends xmlstarlet
+      sudo apt-get -y install --no-install-recommends rlwrap
+      sudo apt-get -y install --no-install-recommends pv
+      sudo apt-get -y install --no-install-recommends sysstat
+
+    # Para el MCP, todo comando lanzado por el agente debería ir envuelto con timeout:
+      # sudo apt-get -y install --no-install-recommends coreutils  # Es el paquete que instala el comando timeout
+      # timeout 300 comando
+      # Por ejemplo: `timeout 300 nmap -sV 10.10.10.10`
+
+    # Utilidades de aislamiento, contención y ejecución controlada
+      sudo apt-get -y install --no-install-recommends bubblewrap
+      sudo apt-get -y install --no-install-recommends firejail
+      sudo apt-get -y install --no-install-recommends systemd-container
+      sudo apt-get -y install --no-install-recommends schroot
+      sudo apt-get -y install --no-install-recommends chrootuid
+
+    # Herramientas para trazabilidad de lo que ejecute el mcp
+      sudo apt-get -y install --no-install-recommends auditd
+      sudo apt-get -y install --no-install-recommends acct
+      sudo apt-get -y install --no-install-recommends rsyslog
+      sudo apt-get -y install --no-install-recommends logrotate
+
+    # Para comandos peligrosos o que puedan quedarse colgados
+      # systemd-run --scope -p MemoryMax=2G -p CPUQuota=200% timeout 600 comando
 
   elif [ $cVerSO == "12" ]; then
 
