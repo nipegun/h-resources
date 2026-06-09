@@ -65,9 +65,9 @@
       1 "  Instalar WordLists de Debian"                       on
       2 "  Instalar WordLists de wfuzz"                        on
       3 "  Descargar WordLists de SecLists"                    on
-      4 "  Descargar WordLists de CSL-LABS"                    on
-      5 "  Descargar WordLists de CrackStation"                on
-      6 "  Descargar WordList WeakPass 4a"                     on
+      4 "  Descargar WordLists de CSL-LABS"                    off
+      5 "  Descargar WordLists de CrackStation"                off
+      6 "  Descargar WordList WeakPass 4a"                     off
       7 "  Descargar RockYou"                                  on
       8 "    Eliminar caracteres de tabulación"                on
       9 "      Preparar WordLists de caracteres incrementales" on
