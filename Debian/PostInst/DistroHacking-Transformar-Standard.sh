@@ -223,6 +223,7 @@
       sudo apt-get -y install --no-install-recommends snmp
       sudo apt-get -y install --no-install-recommends braa
       sudo apt-get -y install --no-install-recommends ike-scan
+      sudo apt-get -y install --no-install-recommends python3-websockets
 
     # DNS, OSINT y Web
       sudo apt-get -y install --no-install-recommends bind9-dnsutils
