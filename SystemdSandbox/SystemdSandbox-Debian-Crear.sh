@@ -199,8 +199,8 @@
   echo ""
   echo "    Copia y ejecuta esta línea dentro del contenedor para preparar el sistema básico:"
   echo ""
-  echo -e "${cColorAzulClaro}      curl -sLk https://raw.githubusercontent.com/nipegun/h-resorces/refs/heads/main/SystemdSandbox/InSystemdSandbox-Debian-Preparar-Base.sh | sed 's-SystemdSandbox-'"$vNombreDelContenedor"'-g' | bash ${cFinColor}"
-  echo "      "
+  echo -e "${cColorAzulClaro}      curl -sLk https://raw.githubusercontent.com/nipegun/h-resources/refs/heads/main/SystemdSandbox/InSystemdSandbox-Debian-Preparar-Base.sh | sed 's-SystemdSandbox-'"$vNombreDelContenedor"'-g' | bash ${cFinColor}"
+  echo "      "                              
   echo ""
   sudo systemd-nspawn -U -D "$vDirSandbox" --bind="$vMountHost:/mnt/host" --machine="$vNombreDelContenedor"
 
